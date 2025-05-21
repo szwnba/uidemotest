@@ -10,7 +10,7 @@
 │   ├── base_page.py   # 基础页面类
 │   └── baidu_page.py  # 百度页面类
 ├── test_cases/        # 测试用例目录
-│   └── test_baidu.py  # 百度测试用例
+│   └── test_baidu.py  # 测试用例
 ├── reports/           # 测试报告目录
 ├── utils/             # 工具类目录
 ├── conftest.py        # pytest配置文件
@@ -31,7 +31,7 @@ pip install -r requirements.txt
 ## 运行测试
 
 ```bash
-pytest test_cases/ --html=reports/report.html
+pytest testcase/ --html=reports/report.html
 ```
 
 ## 主要特性

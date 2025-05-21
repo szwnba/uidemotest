@@ -12,28 +12,19 @@ def setup_logging():
     # 创建logger
     logger = logging.getLogger()
     logger.setLevel(logging.INFO)
-    
-    # 创建控制台处理器
-    console_handler = logging.StreamHandler()
-    console_handler.setLevel(logging.INFO)
-    
-    # 创建文件处理器
-    # 确保reports目录存在
-    if not os.path.exists('logs'):
-        os.makedirs('logs')
-    log_file = f"logs/test_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
-    file_handler = logging.FileHandler(log_file, encoding='utf-8')
-    file_handler.setLevel(logging.INFO)
-    
-    # 创建格式化器
-    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-    console_handler.setFormatter(formatter)
-    file_handler.setFormatter(formatter)
-    
-    # 添加处理器到logger
-    logger.addHandler(console_handler)
-    logger.addHandler(file_handler)
-    
+
+    # # 创建控制台处理器
+    # console_handler = logging.StreamHandler()
+    # console_handler.setLevel(logging.INFO)
+    #
+    # # 创建格式化器
+    # formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    # console_handler.setFormatter(formatter)
+    # # file_handler.setFormatter(formatter)
+    #
+    # # 添加处理器到logger
+    # logger.addHandler(console_handler)
+
     return logger
 
 @pytest.fixture(scope="session", autouse=True)

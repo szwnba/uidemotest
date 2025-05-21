@@ -8,9 +8,8 @@ log = logging.getLogger('TestBaidu')
 
 class TestBaidu:
 
-
     def test_search(self, driver):
-        log.info("开始执行test_search测试用例")
+        log.error("开始执行test_search测试用例")
         baidu_page = BaiduPage(driver)
         """测试百度搜索功能"""
         log.info("打开百度首页")
@@ -19,7 +18,7 @@ class TestBaidu:
         baidu_page.search("pytest selenium")
         # 这里可以添加断言
         log.info("验证页面标题包含'百度'")
-        assert "百度" in driver.title
+        assert "百度1" in driver.title
         log.info("test_search测试用例执行完成")
 
     def test_search2(self):

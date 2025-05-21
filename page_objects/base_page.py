@@ -3,7 +3,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
-from selenium.common.exceptions import TimeoutException, NoSuchElementException
+from selenium.common.exceptions import TimeoutException, NoSuchElementException, NoSuchFrameException, \
+    NoSuchWindowException, NoAlertPresentException
 import logging
 import time
 import os
@@ -218,4 +219,36 @@ class BasePage:
     def scroll_to_top(self):
         """滚动到页面顶部"""
         self.logger.info("滚动到页面顶部")
-        self.driver.execute_script("window.scrollTo(0, 0);") 
+        self.driver.execute_script("window.scrollTo(0, 0);")
+
+    def switch_frame(self, loc):
+        """
+        多表单嵌套切换
+        :param loc: 传元素的属性值
+        :return: 定位到的元素
+        """
+        try:
+            return self.driver.switch_to_frame(loc)
+        except NoSuchFrameException as msg:
+            self.logger.error("查找iframe异常-> {0}".format(msg))
+
+    def switch_windows(self,loc):
+        """
+        多窗口切换
+        :param loc:
+        :return:
+        """
+        try:
+            return self.driver.switch_to_window(loc)
+        except NoSuchWindowException as msg:
+            self.logger.error("查找窗口句柄handle异常-> {0}".format(msg))
+
+    def switch_alert(self):
+        """
+        警告框处理
+        :return:
+        """
+        try:
+            return self.driver.switch_to_alert()
+        except NoAlertPresentException as msg:
+            self.logger.error("查找alert弹出框异常-> {0}".format(msg))

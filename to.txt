@@ -1,0 +1,4 @@
+1. 参照 https://github.com/yingoja/DemoUI/blob/master/public/models/log.py
+    的读取测试数据，写log , PO Base，
+2. 环境URL支持多环境 config
+3. 读取测试数据
