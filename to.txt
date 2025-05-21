@@ -1,10 +1,14 @@
-1. 参照 https://github.com/yingoja/DemoUI/blob/master/public/models/log.py
-    的读取测试数据，写log , PO Base，
+1. 学习借鉴：
+    https://github.com/hupangs/PytestAuto
+    https://github.com/yingoja/DemoUI/blob/master/README.md
 2. 环境URL支持多环境 config
 3. 读取测试数据
 4. 换个漂亮的报表
 5. 熟悉cucumber
 6. 失败截图
+
 ---------------
 验证码
 网络是否通
+登录远程宿主机操作
+持续集成

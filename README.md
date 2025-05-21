@@ -9,7 +9,7 @@
 ├── page_objects/       # 页面对象目录
 │   ├── base_page.py   # 基础页面类
 │   └── baidu_page.py  # 百度页面类
-├── test_cases/        # 测试用例目录
+├── testcase/        # 测试用例目录
 │   └── test_baidu.py  # 测试用例
 ├── reports/           # 测试报告目录
 ├── utils/             # 工具类目录
