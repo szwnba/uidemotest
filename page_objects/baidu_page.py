@@ -1,4 +1,6 @@
 from selenium.webdriver.common.by import By
+
+from config.setting import WEBURL
 from .base_page import BasePage
 
 class BaiduPage(BasePage):
@@ -11,7 +13,7 @@ class BaiduPage(BasePage):
     
     def __init__(self, driver):
         super().__init__(driver)
-        self.url = "https://www.baidu.com"
+        self.url = WEBURL
     
     def open(self):
         """打开百度首页"""

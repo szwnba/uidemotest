@@ -18,7 +18,8 @@ class TestBaidu:
         baidu_page.search("pytest selenium")
         # 这里可以添加断言
         log.info("验证页面标题包含'百度'")
-        assert "百度1" in driver.title
+
+        assert "百度" in driver.title
         log.info("test_search测试用例执行完成")
 
     def test_search2(self):

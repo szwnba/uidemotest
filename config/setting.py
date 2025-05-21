@@ -14,3 +14,5 @@ LOG_DIR = os.path.join(BASE_DIR,"logs")
 TEST_DATA_YAML = os.path.join(BASE_DIR,"testdata")
 
 #运行环境网址主页
+# WebURL地址
+WEBURL = "https://www.baidu.com"
